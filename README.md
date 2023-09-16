@@ -1,6 +1,6 @@
 # [WIP] MultiEdit
 
-MultiEdit is a basic web-based multi-user text editor. You do not need to log in. It's very simple.
+MultiEdit is a basic web-based multi-user text editor. You do not need to log in. It's very simple. (Primary intended use case: collaborative brainstorming)
 
 Imagine that there are infinite documents, and they all have a name. To read a document, you only need its name. Any document name that you can come up with exists; there are infinite documents.
 
@@ -12,4 +12,4 @@ https://multiedit.site/foo
 
 ---
 
-MultiEdit copyleft 2023 Joe Koop; some rights reserved (see [GLPv2](https://www.gnu.org/licenses/gpl-2.0.en.html)). Source [available on GitHub](https://github.com/jkoop/multiedit).
+MultiEdit copyleft 2023 Joe Koop; some rights reserved (see [GPLv2](https://www.gnu.org/licenses/gpl-2.0.en.html)). Source [available on GitHub](https://github.com/jkoop/multiedit).
