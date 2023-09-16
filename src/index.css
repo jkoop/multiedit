@@ -5,8 +5,7 @@ body {
 	background-color: #f8f8f8;
 	font-family: Roboto, Ubuntu, sans-serif;
 	max-width: 1024px;
-	width: 100vw;
-	width: 100svw;
+	width: 100%;
 	margin: 0;
 }
 
@@ -84,8 +83,7 @@ pre {
 
 @media screen and (min-width: 1024px) {
 	body {
-		margin: 0 calc(50vw - 512px);
-		margin: 0 calc(50svw - 512px);
+		margin: 0 calc(50% - 512px);
 	}
 
 	article,
