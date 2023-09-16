@@ -2,8 +2,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 0;
-	background-color: #080808;
-	color: #fff;
+	background-color: #f8f8f8;
 	font-family: Roboto, Ubuntu, sans-serif;
 	max-width: 1024px;
 	width: 100vw;
@@ -12,7 +11,7 @@ body {
 }
 
 nav {
-	background-color: black;
+	background-color: white;
 	position: sticky;
 	top: 0;
 	margin: 0;
@@ -33,25 +32,33 @@ article > h1:first-of-type {
 }
 
 footer {
-	opacity: 0.5;
+	color: #0008;
 }
 
-a {
-	color: #0f0;
+footer a {
+	color: #0808;
+}
+
+a,
+article a:hover,
+footer a:hover {
+	color: #080;
 	text-decoration: none;
 }
 
-a:hover {
+a:hover,
+article a,
+footer a {
 	text-decoration: underline;
 }
 
 /* a[target="_blank"]::after {
-			content: ' ↗';
-		} */
+	content: ' ↗';
+} */
 
 a.filled {
-	background-color: #0f0;
-	color: #000;
+	background-color: #080;
+	color: #fff;
 	margin-top: -0.5rem;
 	margin-bottom: -0.5rem;
 	padding: 0.5rem 0.75rem;
@@ -67,8 +74,12 @@ pre {
 	color: grey;
 }
 
-.white {
-	color: #fff;
+.not-grey {
+	color: #000;
+}
+
+:root {
+	--var-solid-background-color: white;
 }
 
 @media screen and (min-width: 1024px) {
@@ -79,6 +90,44 @@ pre {
 
 	article,
 	footer {
+		background-color: var(--var-solid-background-color);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--var-solid-background-color: black;
+	}
+
+	body {
+		background-color: #080808;
+		color: #fff;
+	}
+
+	nav {
 		background-color: black;
+	}
+
+	footer {
+		color: #fff8;
+	}
+
+	footer a {
+		color: #0f08;
+	}
+
+	a,
+	article a:hover,
+	footer a:hover {
+		color: #0f0;
+	}
+
+	a.filled {
+		background-color: #0f0;
+		color: black;
+	}
+
+	.not-grey {
+		color: #fff;
 	}
 }

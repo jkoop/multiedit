@@ -1,11 +1,14 @@
 /**
  * background.js (c) 2023 Joe Koop
  * License: GPLv2
- * @link https://joekoop.com/js/background.js
+ * this is a stand-alone module that'll add a bit of texture to your background
  * type="module"
+ *
+ * For a bright theme, set body { background-color: #f8f8f8; }
+ * For a dark theme, set body { background-color: #080808; }
  */
 
-const VERSION = 1;
+const VERSION = 2;
 
 if (localStorage.background_version != VERSION) {
 	var canvas = document.createElement('canvas');
@@ -15,7 +18,7 @@ if (localStorage.background_version != VERSION) {
 
 	for (var i = 0; i < w; i++) {
 		for (var j = 0; j < h; j++) {
-			var n = Math.floor(Math.random() * 16);
+			var n = Math.floor(Math.random() * 256);
 			context.fillStyle = `rgb(${n},${n},${n})`;
 			context.fillRect(i, j, 1, 1);
 		}
@@ -25,5 +28,6 @@ if (localStorage.background_version != VERSION) {
 	localStorage.background = canvas.toDataURL();
 }
 
-document.body.style.background = `url(${localStorage.background})`;
+document.body.style.backgroundImage = `url(${localStorage.background})`;
 document.body.style.backgroundSize = '512px';
+document.body.style.backgroundBlendMode = 'overlay';
