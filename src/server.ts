@@ -154,3 +154,4 @@ const server = Bun.serve({
 });
 
 console.log(`Listening on localhost:${server.port}`);
+console.log(`APP_VERSION=${APP_VERSION}`);

@@ -1,5 +1,7 @@
+import { getVersion } from './macros.ts' with { type: 'macro' };
+
 export const APP_NAME = 'MultiEdit';
-export const APP_VERSION = '0.0';
+export const APP_VERSION = getVersion();
 
 export type ClientMessage = RegistrationMessage | InsertionMessageFromClient | DeletionMessageFromClient;
 

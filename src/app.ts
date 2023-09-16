@@ -1,4 +1,6 @@
 /// <reference lib="dom" />
+/// <reference lib="dom.iterable" />
+
 import { APP_NAME, APP_VERSION, ClientMessage, DeletionMessageFromClient, InsertionMessageFromClient, RegistrationMessage, applyChange } from './common.ts';
 
 const path: string = location.pathname.substring(1); // trim leading slash
@@ -15,6 +17,8 @@ const serverMessages: Array<string> = [];
 const localChanges: Record<string, ClientMessage> = {};
 const ws = new WebSocket(wsAddress);
 var waitingForExistingText: boolean = true;
+
+console.log(`APP_VERSION=${APP_VERSION}`);
 
 textarea.placeholder = 'Loading existing text, if any...';
 textarea.disabled = true;
