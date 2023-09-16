@@ -56,7 +56,7 @@ const server = Bun.serve({
 			|| path.startsWith('-')
 			|| path.endsWith('-')
 		) {
-			return new Response(Bun.file("./build/invalid-path.html"));
+			return new Response('The path may contain only A-Z, a-z, 0-9, and -, may not contain more than one - in a row, and may not begin or end with a -.', { status: 404 });
 		} else {
 			return new Response(Bun.file("./build/app.html"));
 		}

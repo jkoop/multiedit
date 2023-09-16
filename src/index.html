@@ -1,2 +1,40 @@
-<link rel="icon" type="image/png" href="/favicon.png" />
-<h1>// @todo: landing page</h1>
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="A basic web-based multi-user text editor" />
+	<meta name="theme-color" content="#080808" />
+
+	<title>MultiEdit</title>
+
+	<link rel="stylesheet" href="/index.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code|Roboto&display=swap" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
+
+	<script async defer src="/background.js" type="module"></script>
+</head>
+
+<body>
+	<nav>
+		<a class="try-it filled">New Doc</a>
+		<a href="https://github.com/jkoop/multiedit" target="_blank">GitHub</a>
+	</nav>
+	<article>
+		<h1>MultiEdit</h1>
+		<p>MultiEdit is a basic web-based multi-user text editor. You do not need to log in. It's very simple. <a class="try-it">Try it</a></p>
+		<p>Imagine that there are infinite documents, and they all have a name. To read a document, you only need its name. Any document name that you can come up with exists; there are infinite documents.</p>
+		<p>Now imagine that whenever you edit a document, everyone else that is reading that document can see your changes, and whenever anyone else edits the document, you can see their changes.</p>
+		<p>A document name is anything that comes after the slash in the address bar of your browser. For example, "foo":</p>
+		<pre class="grey"><span id="hereLocation"></span><span class="white">foo</span></pre>
+		<p>The "try it" link and "new doc" button above generate a random document name.</p>
+	</article>
+	<footer>
+		MultiEdit copyleft 2023 Joe Koop; some rights reserved (see <a href="https://www.gnu.org/licenses/gpl-2.0.en.html" target="_blank">GLPv2</a>). Source <a href="https://github.com/jkoop/multiedit" target="_blank">available on GitHub</a><!--, package <a href="https://hub.docker.com/r/jkoop/multiedit">available on Docker Hub</a -->.
+
+	</footer>
+	<script src="/index.js"></script>
+</body>
+
+</html>
